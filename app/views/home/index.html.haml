@@ -1,0 +1,15 @@
+.user-form-container
+	.login-form.text-center
+		%h1 Welcome to Familyst
+		%p From the creators of the GeverFlow
+
+		/ = render "devise/sessions/new"
+
+		%span.glyphicon.glyphicon-user
+		- if user_signed_in?
+			.welcome= "#{I18n.t("welcome")}: #{current_user.username}"
+			= link_to I18n.t("sign_out"), destroy_user_session_path, :method => :delete
+		- else
+			%a{href: "/users/sign_up"}
+				%strong= I18n.t("sign_up")
+			%a{href: "/users/sign_in"}= I18n.t("sign_in")

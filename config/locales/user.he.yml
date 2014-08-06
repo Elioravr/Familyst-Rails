@@ -1,0 +1,25 @@
+he:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              blank: הזן שם משתמש בבקשה.
+              taken: שם המשתמש שהזנת כבר קיים.
+            email:
+              blank: הזן כתובת דואר אלקטרוני בבקשה.
+              taken: הדואר האלקטרוני שהזנת כבר קיים.
+            password:
+              blank: הזן סיסמא בבקשה.
+              too_short: הסיסמא שהזנת קצרה מדי.
+              too_long: הסיסמא שהזנת ארוכה מדי.
+            password_confirmation:
+              blank: הזן את סיסמתך שוב בבקשה.
+              confirmation: הסיסמא הנוספת שהזנת לא תואמת את הסיסמא הראשונה שהזנת.
+    attributes:
+      users:
+        username: שם משתמש
+        email: דואר אלקטרוני
+        password: סיסמא
+        password_confirmation: ודא סיסמא

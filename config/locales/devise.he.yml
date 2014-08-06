@@ -1,0 +1,17 @@
+he:
+  devise:
+    sign_up_page: הרשמה למערכת
+    sign_in_page: התחברות למערכת
+    forgot_your_password: שכחת סיסמא?
+    failure:
+      already_authenticated: "המשתמש כבר מחובר."
+      invalid: "שם המשתמש או הסיסמא שהזנת אינם נכונים."
+      not_found_in_database: "שם המשתמש או הסיסמא שהזנת אינם נכונים."
+      timeout: "עבר הרבה זמן, התחבר שוב בבקשה."
+      unauthenticated: "התחבר בבקשה בכדי שתוכל להמשיך בפעולות האלו."
+    registrations:
+      destroyed: "המשתמש נחמק בהצלחה. מקווים לראותך שוב!"
+      signed_up: "ברוך הבא! התחברת בהצלחה."
+    sessions:
+      signed_in: "התחברת בהצלחה."
+      signed_out: "התנתקת בהצלחה."

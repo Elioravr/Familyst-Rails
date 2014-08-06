@@ -1,0 +1,42 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass here: http://sass-lang.com/
+
+html, body
+  height: 100%
+  width: 100%
+  direction: rtl
+
+.super-background
+  -webkit-filter: blur(0px)
+  transition: -webkit-filter 1s
+  height: 100%
+  width: 100%
+  background-image: url(super-jpg.jpg)
+  // background-position: 1358px
+  background-size: 100%
+  padding: 0
+
+.familyst-banner
+  transition: opacity 1s
+  opacity: 0
+
+.user-form-container
+  background-position: 1358px
+  padding: 0
+  opacity: 0
+  transition: opacity 1s
+
+  .sign-in-form, .sign-up-form, .login-form
+    background-color: rgba(255, 255, 255, 0.7)
+    height: auto
+    width: 400px
+    position: absolute
+    top: 120px
+    right: calc(50% - 200px)
+
+.blur
+  -webkit-filter: blur(5px)
+
+.visible
+  opacity: 1

@@ -1,0 +1,18 @@
+.super-background
+.familyst-banner Familyst
+.user-form-container.text-center
+  .sign-in-form.form
+    .title= t("devise.sign_in_page")
+    - unless alert.nil?
+      .alert.alert-danger.text-center#alert{role: "alert"}= alert
+
+    = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {novalidate:""}) do |f|
+      = f.error_notification
+
+      .inputs
+        = f.input :username, autofocus: true, required: true, input_html: {class: "form-control"}, label: getTranslation("username")
+        = f.input :password, required: true, input_html: {class: "form-control"}, label: getTranslation("password")
+
+      .actions
+        = f.button :submit, t("sign_in"), class: "btn btn-default"
+        = render :partial => "devise/shared/links"
