@@ -1,0 +1,13 @@
+he:
+  activerecord:
+    errors:
+      models:
+        todo:
+          attributes:
+            title:
+              blank: הזן שם לרשימה בבקשה.
+    attributes:
+      todos:
+        title: כותרת
+        description: תיאור
+        quantity: כמות
