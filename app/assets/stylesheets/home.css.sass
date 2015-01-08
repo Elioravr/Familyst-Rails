@@ -7,15 +7,20 @@ html, body
   width: 100%
   direction: rtl
 
-.super-background
+.super-background, .super-background-2
   -webkit-filter: blur(0px)
   transition: -webkit-filter 1s
   height: 100%
   width: 100%
   background-image: url(super-jpg.jpg)
+  background-repeat: no-repeat
   // background-position: 1358px
   background-size: 100%
   padding: 0
+
+.super-background-2
+  -webkit-filter: blur(5px)
+  background-image: url(groceries.jpg)
 
 .familyst-banner
   transition: opacity 1s
@@ -40,3 +45,9 @@ html, body
 
 .visible
   opacity: 1
+
+.registration-button
+  position: absolute
+  top: 70%
+  text-align: center
+  width: 100%
