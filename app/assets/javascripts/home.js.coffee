@@ -9,3 +9,10 @@ $ ->
       $(".familyst-banner, .user-form-container").addClass("visible")), 1000
 
   startHomeAnimation()
+
+  $(".registration-button .btn-primary").click ->
+    $("html, body").animate { scrollTop: $(window).height() },
+      duration: 1300
+    false
+    $(".familyst-banner").animate { top: "104%" },
+      duration: 1300

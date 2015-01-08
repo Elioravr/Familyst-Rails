@@ -1,5 +1,6 @@
 .super-background
-.familyst-banner Familyst
+/ .familyst-banner Familyst
+.familyst-banner
 .user-form-container.text-center
   .sign-in-form.form
     .title= t("devise.sign_in_page")
@@ -10,9 +11,31 @@
       = f.error_notification
 
       .inputs
-        = f.input :username, autofocus: true, required: true, input_html: {class: "form-control"}, label: getTranslation("username")
-        = f.input :password, required: true, input_html: {class: "form-control"}, label: getTranslation("password")
+        /= f.input :username, autofocus: true, required: true, input_html: {class: "form-control"}, placeholder: getTranslation("user", "username"), label: false
+        = f.input :username, autofocus: true, required: true, input_html: {class: "form-control"}, label: getTranslation("user", "username")
+        /= f.input :password, required: true, input_html: {class: "form-control"}, placeholder: getTranslation("user", "password"), label: false
+        = f.input :password, required: true, input_html: {class: "form-control"}, label: getTranslation("user", "password")
 
       .actions
+        = link_to t("devise.forgot_your_password"), new_password_path(resource_name)
         = f.button :submit, t("sign_in"), class: "btn btn-default"
-        = render :partial => "devise/shared/links"
+
+  .registration-button
+    .btn.btn-primary= t("sign_up")
+
+
+.super-background-2
+.sign-up-form.form
+  .title= t("devise.sign_up_page")
+
+  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {novalidate:""}) do |f|
+    = f.error_notification
+
+    .inputs
+      = f.input :username, autofocus: true, input_html: {class: "form-control"}, label: getTranslation("user", "username")
+      = f.input :email, input_html: {class: "form-control"}, label: getTranslation("user", "email")
+      = f.input :password, input_html: {class: "form-control"}, label: getTranslation("user", "password")
+      = f.input :password_confirmation, input_html: {class: "form-control"}, label: getTranslation("user", "password_confirmation")
+
+    .actions
+      = f.button :submit, t("sign_up"), class: "btn btn-default"
