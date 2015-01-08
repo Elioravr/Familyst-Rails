@@ -1,5 +1,5 @@
 module HomeHelper
-  def getTranslation(attribute)
-    t("activerecord.attributes.users.#{attribute}")
+  def getTranslation(model, attribute)
+    t("activerecord.attributes.#{model}s.#{attribute}")
   end
 end
