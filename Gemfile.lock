@@ -101,6 +101,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.4)
       sprockets-rails (~> 2.0)
+    rails-admin (0.0.0)
     railties (4.1.4)
       actionpack (= 4.1.4)
       activesupport (= 4.1.4)
@@ -165,6 +166,7 @@ DEPENDENCIES
   jquery-rails
   rabl-rails
   rails (= 4.1.4)
+  rails-admin
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_form

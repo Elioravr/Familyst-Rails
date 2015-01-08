@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # my gems
+gem 'rails-admin'
 gem 'haml-rails'
 gem 'devise'
 gem 'byebug'
@@ -34,6 +35,7 @@ gem 'simple_form'
 gem 'hirb-unicode'
 gem 'gon'
 gem 'rabl-rails'
+gem 'hirb-unicode'
 
 gem 'bootstrap-sass', '~> 3.2.0.1'
 
