@@ -1,0 +1,9 @@
+.lists-form.form
+  = simple_form_for(@list) do |f|
+    = f.error_notification
+
+    .inputs
+      = f.input :name, autofocus: true, input_html: {class: "form-control"}, placeholder: getTranslation("list", "name"), label: false
+  
+    .actions
+      = f.button :submit, t("lists.forms.new.save"), class: "btn btn-default"

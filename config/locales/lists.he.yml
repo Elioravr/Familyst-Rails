@@ -1,0 +1,6 @@
+he:
+  lists:
+    forms:
+      new:
+        title: רשימה חדשה
+        save: שמור

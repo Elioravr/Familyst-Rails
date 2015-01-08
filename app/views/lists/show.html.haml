@@ -1,0 +1,45 @@
+/ %p#notice= notice
+
+/ %p
+/   %b Name:
+/   = @list.name
+
+/ = link_to 'Edit', edit_list_path(@list)
+/ \|
+/ = link_to 'Back', lists_path
+
+.list
+  .list-name= @list.name
+
+  .todos-container
+    - @list.todos.each do |todo|
+      .todo
+        .todo-checkbox.todo-checkbox-done
+          / %input{type: "checkbox"}
+        .todo-content
+          .todo-title= todo.title
+          .todo-description= todo.description
+          .todo-quantity
+            .quantity-text= "#{getTranslation("todo", "quantity")}:"
+            .quantity-number= todo.quantity
+
+    / .todo
+    /   = form_for @todo do |f|
+    /     - if @todo.errors.any?
+    /       #error_explanation
+    /         %h2= "#{pluralize(@todo.errors.count, "error")} prohibited this todo from being saved:"
+    /         %ul
+    /           - @todo.errors.full_messages.each do |msg|
+    /             %li= msg
+
+    /     .field
+    /       = f.label :title
+    /       = f.text_field :title
+    /     .field
+    /       = f.label :description
+    /       = f.text_field :description
+    /     .field
+    /       = f.label :done
+    /       = f.check_box :done
+    /     .actions
+    /       = f.submit 'Save'

@@ -1,0 +1,11 @@
+he:
+  activerecord:
+    errors:
+      models:
+        list:
+          attributes:
+            name:
+              blank: הזן שם לרשימה בבקשה.
+    attributes:
+      lists:
+        name: שם
