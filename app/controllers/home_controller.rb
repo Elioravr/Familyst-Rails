@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     unless user_signed_in?
       redirect_to new_user_session_path
     else
-      redirect_to todos_path
+      redirect_to lists_path
     end
   end
 end
