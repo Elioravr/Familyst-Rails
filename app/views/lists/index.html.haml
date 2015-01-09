@@ -1,27 +1,37 @@
-.panel.panel-default
+.panel.panel-default.lists-index
   .panel-heading
-    %h1 Listing lists
-  .panel-body
-    %p
-      blah blah blah
-      blah blah blah
-      blah blah blah
-      blah blah blah
-      blah blah blah
-      blah blah blah
+    %h1= t("lists.index.list_title")
+  / .panel-body
+  /   %p= t("lists.index.list_description")
 
-  %table.table.lists-index
-    %tr
-      %th Name
-      %th Actions
+  / %table.table
+  /   %tr
+  /     %th.name-column= getTranslation("list", "name")
+  /     %th.actions-column= t("lists.index.actions")
 
-    - @lists.each do |list|
-      %tr
-        %td= list.name
-        %td
-          = link_to 'Show', list
-          = link_to 'Edit', edit_list_path(list)
-          = link_to 'Destroy', list, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  /   - @lists.each do |list|
+  /     %tr
+  /       %td.list-name= link_to list.name, list
+  /       %td.btn-group.btn-group-lg
+  /         = link_to t("lists.index.edit_list"), edit_list_path(list)#, class: "btn btn-default"
+  /         = link_to t("lists.index.destroy_list"), list, :method => :delete, :data => { :confirm => 'Are you sure?' }#, class: "btn btn-default"
+
+  - @lists.each do |list|
+    .list-list-item
+      .list-details
+        .list-name= link_to list.name, list
+        .list-users
+          %span= "#{getTranslation('list', 'users')}:"
+          - list.users.each do |user|
+            %span.username= user.username
+      .list-actions.btn-group.btn-group-lg
+        = link_to t("lists.index.destroy_list"), list, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        = link_to t("lists.index.edit_list"), edit_list_path(list)
+
+/ %h1.list-form-title= t("lists.forms.new.title")
+
+/ = render 'form'
+
 
 / %br
 

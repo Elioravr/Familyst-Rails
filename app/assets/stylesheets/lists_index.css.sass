@@ -1,4 +1,56 @@
-.table.lists-index
+.lists-index
+  width: 36%
+  margin:
+    right: 20px
 
-  th, td
+  .panel-heading
     text-align: center
+
+  // .name-column
+  //   width: 30%
+
+  // .actions-column
+  //   width: 70%
+
+  // th, td.list-name
+  //   line-height: 45px
+  //   text-align: center
+
+  .list-list-item
+    height: 65px
+    width: 100%
+    padding-right: 10px
+
+    .list-details
+      display: inline-block
+
+      .list-name
+        font-size: 32px
+
+      .list-users
+        .username
+          color: grey
+
+    .list-actions
+      float: left
+
+      a
+        text-decoration: none
+        cursor: pointer
+        color: black
+        display: inline-block
+        border-radius: 0
+        line-height: 65px
+        padding: 0 20px
+        border:
+          top: none
+          right: 1px solid #ddd
+          bottom: none
+          left: none
+        font-size: 18px
+        float: left
+
+      a:hover
+        border-width: 0 1px 0 0
+        background-color: #e6e6e6
+        // border-color: #adadad

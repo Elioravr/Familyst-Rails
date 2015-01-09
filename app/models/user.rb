@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
 
   has_and_belongs_to_many :lists
+
+  def to_s
+    "#{username} - #{email}"
+  end
 end
