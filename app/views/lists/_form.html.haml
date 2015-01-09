@@ -4,6 +4,7 @@
 
     .inputs
       = f.input :name, autofocus: true, input_html: {class: "form-control"}, placeholder: getTranslation("list", "name"), label: false
-  
+      = f.association :users, input_html: {class: "form-control"}, placeholder: getTranslation("list", "users"), label: false
+
     .actions
       = f.button :submit, t("lists.forms.new.save"), class: "btn btn-default"
