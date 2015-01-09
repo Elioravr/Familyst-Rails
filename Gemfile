@@ -38,6 +38,7 @@ gem 'rabl-rails'
 gem 'hirb-unicode'
 
 gem 'bootstrap-sass', '~> 3.2.0.1'
+gem 'sprockets-rails', '>= 2.1.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
